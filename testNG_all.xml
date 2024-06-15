@@ -16,7 +16,7 @@
         <classes>
             <class name="org.example.ProzorroSearchTestsHW5">
                 <methods>
-                    <include name="testSearchWithEmptyInput"/>
+                    <include name="testSearchWithIncorrectInput"/>
                     <include name="testSearchWithInvalidInput"/>
                 </methods>
             </class>

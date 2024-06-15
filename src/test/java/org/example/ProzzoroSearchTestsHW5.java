@@ -48,12 +48,11 @@ class ProzorroSearchTestsHW5 extends BaseTests {
     public void testSearchResultsContainTerm() {
         String searchTerm = "закупівля";
         webDriver.get("https://prozorro.gov.ua/");
-        WebElement searchBox = webDriver.findElement(By.className("search-text__input")); // replace with actual search box ID
+        WebElement searchBox = webDriver.findElement(By.className("search-text__input"));
         searchBox.sendKeys(searchTerm);
         searchBox.submit();
 
-        // Verify that at least one search result contains the search term
-        List<WebElement> searchResults = webDriver.findElements(By.cssSelector(".item-title__title")); // replace with actual search result item selector
+        List<WebElement> searchResults = webDriver.findElements(By.cssSelector(".item-title__title"));
         boolean containsSearchTerm = false;
         for (WebElement result : searchResults) {
             if (result.getText().toLowerCase().contains(searchTerm.toLowerCase())) {
