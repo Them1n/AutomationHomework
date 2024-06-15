@@ -1,4 +1,4 @@
-package org.example.Waiters;
+package org.example.Homework3;
 
 import org.example.Base.BaseTests;
 import org.openqa.selenium.By;
