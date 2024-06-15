@@ -1,0 +1,14 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="NegativeTests">
+    <test name="NegativeTests">
+        <classes>
+            <class name="org.example.ProzorroSearchTestsHW5">
+                <methods>
+                    <include name="testSearchWithIncorrectInput"/>
+                    <include name="testSearchWithInvalidInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,15 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="PositiveTests">
+    <test name="PositiveTests">
+        <classes>
+            <class name="org.example.ProzorroSearchTestsHW5">
+                <methods>
+                    <include name="testPositiveSearch"/>
+                    <include name="testSearchWithValidInput"/>
+                    <include name="testSearchResultsContainTerm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
