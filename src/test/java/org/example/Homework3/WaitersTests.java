@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 public class WaitersTests extends BaseTests {
     @Test
     public void prozzoroTest() {
-            String searchValue = "тумба";
+            String searchValue = "тумби";
             WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
             webDriver.get("https://prozorro.gov.ua/uk");
             WebElement searchInput = webDriver.findElement(By.className("search-text__input"));
@@ -46,6 +46,11 @@ public class WaitersTests extends BaseTests {
             String currentCompanyName = totalCompanyName
                     .get(4).getText().substring(startNum, endNum).trim();
 
+            System.out.println(currentName);
+            System.out.println(currentCost);
+            System.out.println(currentStatus);
+            System.out.println(currentCompanyName);
+
             currentResult.click();
 
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//td[@class='col-sm-6']")));
@@ -58,6 +63,11 @@ public class WaitersTests extends BaseTests {
                     .getText().trim();
             String detailsCompanyName = webDriver.findElement(By.xpath("//table[@class='tender--customer margin-bottom']//td[@class='col-sm-6']"))
                     .getText().substring(startNum, endNum).trim();
+
+            System.out.println(detailsName);
+            System.out.println(detailsCost);
+            System.out.println(detailsStatus);
+            System.out.println(detailsCompanyName);
 
             assert currentName.equals(detailsName) : "Name does not match";
             assert currentCost.equals(detailsCost) : "Cost does not match";
