@@ -75,3 +75,5 @@ public class WaitersTests extends BaseTests {
             assert currentCompanyName.equals(detailsCompanyName) : "Company name does not match";
     }
 }
+
+
